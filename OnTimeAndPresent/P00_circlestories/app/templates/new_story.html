@@ -1,0 +1,33 @@
+<!--
+    CircleTable -- Christopher Liu, Yusuf Elsharawy, Deven Maheshwari, Naomi Naranjo
+    SoftDev
+    P00: CircleStories
+
+    Page for Creating a New Story
+-->
+
+{% extends "base.html" %}
+{% block title %}New Story{% endblock %}
+
+{% block content %}
+    <h1>Create a New Story</h1>
+    <p>
+        Begin a new story here! Give it a title and write the beginning.
+        Other users will be able to add on with their own ideas!
+    </p>
+    <form action="/new_story" method="POST">
+        <p>
+        <textarea name="title" placeholder="Poignant story title here..." rows="1" cols="70" required></textarea>
+        </p>
+        
+        <p>
+        <textarea name="text" placeholder="It was a dark and stormy night..." rows="20" cols="70" required></textarea>
+        </p>
+
+        <p>
+        <textarea name="image" placeholder="Optionally, add an image link here..." rows="1" cols="70"></textarea>
+        </p>
+
+        <input type="submit" value="Create new story!">
+    </form>
+{% endblock %}

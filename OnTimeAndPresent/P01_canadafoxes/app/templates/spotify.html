@@ -1,0 +1,109 @@
+<!--
+  Canada Foxes - Deven Maheshwari, Emma Buller, Lucas Lee, Naomi Naranjo
+  SoftDev
+  P01 - ArRESTed Development
+  2022-01-04
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Musical Movies</title>
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/foundation.css">
+
+</head>
+
+<body>
+
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h2>Found:</h2>
+        </div>
+        <div class="cell large-3 medium-4">
+            <div class="card" style="width: 300px;">
+                <div class="card-divider">
+                    <h5>{{soundtrack['name']}}</h5>
+                </div>
+                <img src="{{soundtrack['images'][0]['url']}}">
+                <div class="card-section">
+                    <p>Release Date: {{soundtrack['release_date']}} <br>
+                        By: {{soundtrack['artists'][0]['name']}}
+                    </p>
+                    <a href="{{soundtrack['external_urls']['spotify']}}">Spotify Link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h2>Albums by {{soundtrack['artists'][0]['name']}}</h2>
+        </div>
+        {%for album in albums%}
+        <div class="cell large-3 medium-4">
+            <div class="card" style="width: 300px;">
+                <div class="card-divider">
+                    <h5>{{album['name']}}</h5>
+                </div>
+                <img src="{{album['images'][0]['url']}}">
+                <div class="card-section">
+                    <p>Release Date: {{album['release_date']}}</p>
+                    <a href="{{album['external_urls']['spotify']}}">Spotify Link</a>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h2>Artists Related To {{soundtrack['artists'][0]['name']}}</h2>
+        </div>
+        {%for related_artist in related_artists%}
+        <div class="cell large-3 medium-4">
+            <div class="card" style="width: 300px;">
+                <div class="card-divider">
+                    <h5>{{related_artist['name']}}</h5>
+                </div>
+                <img src="{{related_artist['images'][0]['url']}}">
+                <div class="card-section">
+                    <a href="{{related_artist['external_urls']['spotify']}}">Spotify Link</a>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h2>Song Recommendations</h2>
+        </div>
+
+        {%for rec in recs%}
+        <div class="cell large-3 medium-4">
+            <div class="card" style="width: 300px;">
+                <div class="card-divider">
+                    <h5>{{rec['name']}}</h5>
+                </div>
+                <img src="{{rec['album']['images'][0]['url']}}">
+                <div class="card-section">
+                    <p>By: {{rec['album']['artists'][0]['name']}}<br>
+                        Release Date: {{rec['album']['release_date']}}
+                    </p>
+                    <a href="{{rec['external_urls']['spotify']}}">Spotify Link</a>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+
+    <div class="footer">
+        <footer>Copyright &copy; 2022 Canadafoxes</footer>
+    </div>
+
+</body>
+
+</html>

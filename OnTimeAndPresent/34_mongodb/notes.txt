@@ -1,0 +1,19 @@
+Deven Maheshwari 
+SoftDev
+K34: Another DB Perspective
+2022-04-26
+
+DISCO:
+----------
+- Schema = outline based on data dictates and dynamic conditions
+	- Schema Versioning Pattern to change application but make them 
+function symbiotically. Tag schema version, and update queries
+- Collection Relationship Diagram (CRD)
+	- Linked and embedding based on users and articles, respectively
+
+QCC:
+----------
+- Data model is a positive feedback loop with improvement
+- I like the scalar in child form of CRD's
+- What kinds of interview questions cover MongoDB optimization with 
+computing pattern or bucket pattern or others?

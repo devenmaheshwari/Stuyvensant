@@ -1,0 +1,185 @@
+Canada Foxes - Deven Maheshwari, Emma Buller, Lucas Lee, Naomi Naranjo
+SoftDev
+P01 - ArRESTed Development
+2022-01-04
+
+devenM -- 2021-12-09 17:02
+Added file structure as well as updated design doc. Included foundation
+specifications, database dataypes, and python role in API requests and
+routing.
+
+emmaB -- 2021-12-10 00:12
+Added more information about API usage for features of the site.
+
+emmaB -- 2021-12-10 08:37
+Added html homepage
+
+LucasL -- 2021-12-10 10:30
+Added spotify API python file
+Created method to get access token from client id and secret key
+Tested out searching for a particular album with access token
+
+emmaB -- 2021-12-10 13:53
+Worked on creating IMDB api file. Started with inital request for movie
+
+devenM -- 2021-12-13 08:39
+Configured canadafoxes.py, init.py, and routes.py to successfully display
+webpage. Added secret key generation and forms.
+
+emmaB -- 2021-12-10 08:38
+Added functions to imdb.py
+
+lucasL -- 2021-12-13 12:00
+Worked on getting other albums by the artist of a particular movie soundtrack
+
+devenM -- 2021-12-14 08:40
+Created basic login and registration functions. Frontend file structure
+created.
+
+emmaB -- 2021-12-14 08:36
+Started implementing movie review api
+
+emmaB -- 2021-12-14 13:53
+Made the getReview function return less results from the api call
+
+lucasL -- 2021-12-15 08:30
+Created a template to display spotify reccomendations
+
+naomiN -- 2021-12-15 08:36
+Added routing for login and register
+
+devenM -- 2021-12-15 08:36
+Integrating databse and login/registration. Adjusting table setup
+
+naomiN -- 2021-12-15 16:57
+Fixed login and reigster, added log out on homepage
+
+emmaB -- 2021-12-15 23:56
+Started to implement imdb.py integration with html
+
+devenM -- 2021-12-16 08:36
+Completed login and registration. Routing for search and profile
+by detecting user presence with session.
+
+lucasL -- 2021-12-16 08:40
+Completed template for song recommendations
+Added headers and more information on the soundtrack to that was
+found based on a search
+
+emmaB -- 2021-12-16 08:41
+Started to implement templates into movieSearch. Added radio buttons to
+select the movie you want information from after the initial search.
+
+emmaB -- 2021-12-17 08:21
+Finished templating for the inital movieSearch. Returns a list of
+movies that could be related to the initial search query.
+
+lucasL -- 2021-12-17 08:25
+Finished up final spotify API python file and HTML template
+Added comments to code for clarification
+
+emmaB -- 2021-12-20 08:40
+Added title, poster, and plot to movieinfo.html
+
+lucasL -- 2021-12-21 08:00
+Added methods for webscraping NYT movie review articles for just the text
+Created python file to handle NYT movie review API requests and searching for reviews based on a movie title
+Moved API key loading to a .env file
+
+emmaB -- 2021-12-21 08:40
+Added more movie information to moveinfo.html. Started with adding ratings to movieinfo
+
+devenM -- 2021-12-21 08:39
+Routing for moviesearch, search, spotfy. Connecting the three files and
+writing the frontend for searching as well as error handling when movie
+title cannot be found.
+
+lucas L -- 2021-12-22 08:30
+Polished up main, login, and register page css
+Consolidated webscrapper into the NYT review python file
+Updated requirements to include beautifulsoup4 and python-dotenv
+
+emmaB -- 2021-12-22 13:28
+Added rating information in movieInfo
+Started implementing adding reviews in movieInfo through functions in imdb.py
+Fixed minor issues in functions related to moviesearch
+
+lucasL -- 2021-12-23 08:40
+Cleaned up the profile and search css
+Fixed issue with missized inline buttons for the search function
+
+emmaB -- 2021-12-24 18:21
+Added short reviews into movieInfo
+The color of the label with the score changes depending on how high the score is
+
+devenM -- 2021-01-02 16:17
+Routing for searching movies and generating movie reviews and spotify recomendations
+Adjusted form actions in html form responses
+Updated readme and repo file structure for keys and css
+
+lucasL -- 2022-01-02 18:15
+Worked routing for searching a movie and finding its information
+Replaced form in the moviesearch with a link to a results page
+Redid CSS for the moviesearch and movieinfo templates
+Added an error and 404 page for api errors and missing pages respectively
+Changed imdb.py to use f strings in order to substitute the key into requests
+
+lucasL -- 2022-01-02 19:15
+Added the NYT review and spotify information to results
+Added back env file
+
+devenM -- 2021-01-02 05:39
+Error handling for imdb, spotify, nyt. Issue with merge from previous push.
+Created 503 error page for overuse of api calls, included in routing.
+
+emmaB -- 2022-01-02 22:43
+Started adding env file implementation with the imdb api key
+
+devenM -- 2021-01-02 05:39
+Error handling for imdb, spotify, nyt. Issue with merge from previous push.
+Created 503 error page for overuse of api calls, included in routing.
+
+devenM -- 2021-01-02 08:39
+Continued error handling after fixed merge conflict. Checked requirements downloads and
+API token for presentation.
+
+emmaB -- 2022-01-03 08:14
+Finished implementing accessing imdb key through env file
+
+lucasL -- 2022-01-03 08:40
+Updated forms to use foundation button css
+Created template for showing past searches in the profile
+Hardcoded some example searches, to be replaced with db call
+
+emmaB -- 2022-01-03 13:48
+Fixed issue with link to trailer not working
+
+naomiN -- 2022-01-03 15:08
+Fixed database method for adding searches and getting previous searches, implemented
+methods in routing for profile and results
+
+emmaB -- 2022-01-03 18:39
+Added more info (director, writer, genre, runtime, release date) into movieinfo
+
+devenM -- 2021-01-04 06:33
+Updated API keys. Changed returns for python helper files in case that no requests are made.
+
+emmaB -- 2022-01-04 08:12
+Got rid of duplicate code for findMovieYear
+
+lucasL -- 2022-01-04 08:30
+Updated error formatting in login/register
+Shifted key loading to use the .txt files in the keys folder
+
+devenM -- 2021-01-04 08:38
+Fixing API keys. Commenting code throughout files for clarification.
+Updated API keys. Changed returns for python helper files in case that no requests are made.
+
+devenM -- 2021-01-04 08:06
+Added favicons and external css style sheet. Deleted extraneous API keys.
+
+lucasL -- 2021-01-04
+Added some comments and updated key readme
+
+emmaB -- 2021-01-04 23:33
+Added comments into imdb.py

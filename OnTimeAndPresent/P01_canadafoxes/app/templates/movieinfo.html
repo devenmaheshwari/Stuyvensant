@@ -1,0 +1,219 @@
+<!--
+  Canada Foxes - Deven Maheshwari, Emma Buller, Lucas Lee, Naomi Naranjo
+  SoftDev
+  P01 - ArRESTed Development
+  2022-01-04
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Musical Movies</title>
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/foundation.css">
+
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text">Musical Movies</li>
+                <li>
+                    <a href="{{ url_for('index') }}">Home</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('profile') }}">Profile</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('search') }}">Search For Movies</a>
+                </li>
+            </ul>
+        </div>
+        <div class="top-bar-right">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h1 class="text-center">{{movie['title']}}</h1>
+        </div>
+
+        <div class="cell large-4">
+            <div class="text-center">
+                <img style="height: auto" src="{{movie['image']}}">
+            </div>
+            <h4>Release Date: {{movie['releaseDate']}} <br>
+              Runtime: {{movie['runtimeStr']}}
+            </h4>
+        </div>
+
+        <div class="cell large-8">
+          <p> {{movie['plot']}} <br>
+              Watch the trailer <a href="{{movie['trailer']['link']}}"> here!</a>
+               <br> <br>
+          <b>Director(s):</b> {{movie['directors']}} <br>
+          <b>Writer(s): </b> {{movie['writers']}} <br>
+          <b>Genres: </b> {{movie['genres']}} <br>
+          </p>
+        </div>
+
+        <div class="cell">
+            <h2 class="text-center">Main Cast</h2>
+        </div>
+
+        {%for n in range(0,3)%}
+        <div class="text-center cell large-4 medium-4">
+            <div class="card text-center">
+                <div class="card-divider">
+                    <h5>{{movie['actorList'][n]['name']}}</h5>
+                </div>
+                <img src="{{movie['actorList'][n]['image']}}">
+                <div class="card-section">
+                    <h4>{{movie['actorList'][n]['asCharacter']}}</h4>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+
+        <div class="cell">
+            <h2 class="text-center">Ratings and Reviews</h2>
+        </div>
+
+        <div class="cell large-6">
+            <figure class="text-center">
+                <a href="https://www.imdb.com">
+                    <img src="https://ia.media-imdb.com/images/M/MV5BODc4MTA3NjkzNl5BMl5BcG5nXkFtZTgwMDg0MzQ2OTE@._V1_.png" height="250 px" width="250 px"></a>
+                <figcaption>{{movie['imDbRating']}}</figcaption>
+            </figure>
+        </div>
+        <div class="cell large-6">
+            <figure class="text-center">
+                <a href="https://www.metacritic.com">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Metacritic.svg/1024px-Metacritic.svg.png" height="250 px" width="250 px"> </a>
+                <figcaption>{{movie['metacriticRating']}}</figcaption>
+            </figure>
+        </div>
+
+        {%for n in reviews%}
+        <div class="cell">
+            <div class="callout">
+                {%if (n['rate'] | int) >= 80 %}
+                <span class="label success">{{n['rate']}}</span>
+                {%elif (n['rate'] | int) >= 60 %}
+                <span class="label warning"> {{n['rate']}}</span>
+                {%else%}
+                <span class="label alert">{{n['rate']}}</span>
+                {%endif%}
+                <h4>
+                    {{n['publisher']}}
+                </h4>
+                <h6> {{n['author']}} </h6>
+                <p> {{n['content']}} </p>
+            </div>
+        </div>
+
+        {%endfor%}
+
+        <div class="cell">
+            <h2 class="text-center">New York Times Review</h2>
+        </div>
+
+        <div class="cell">
+            <h3 class="text-center">{{nyt['headline']}}</h3>
+            <h3 class="text-center">by {{nyt['byline']}}</h3>
+            {%for p in nyt_text%}
+                <p>{{p}}</p>
+            {%endfor%}
+            <p>Read the full review <a href={{nyt['link']['url']}}>here</a></p>
+        </div>
+
+        <div class="cell">
+            <h2 class="text-center">Movie Album</h2>
+        </div>
+        <div class="cell large-3 medium-4">
+            <div class="card" style="width: 300px;">
+                <div class="card-divider">
+                    <h5>{{soundtrack['name']}}</h5>
+                </div>
+                <img src="{{soundtrack['images'][0]['url']}}">
+                <div class="card-section">
+                    <p>Release Date: {{soundtrack['release_date']}} <br>
+                        By: {{soundtrack['artists'][0]['name']}}
+                    </p>
+                    <a href="{{soundtrack['external_urls']['spotify']}}">Spotify Link</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cell">
+            <h2 class="text-center">Albums by {{soundtrack['artists'][0]['name']}}</h2>
+        </div>
+
+        {%for album in albums%}
+        <div class="cell large-3 medium-4">
+            <div class="card" style="width: 300px;">
+                <div class="card-divider">
+                    <h5>{{album['name']}}</h5>
+                </div>
+                <img src="{{album['images'][0]['url']}}">
+                <div class="card-section">
+                    <p>Release Date: {{album['release_date']}}</p>
+                    <a href="{{album['external_urls']['spotify']}}">Spotify Link</a>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+
+        <div class="cell">
+            <h2 class="text-center">Artists Related To {{soundtrack['artists'][0]['name']}}</h2>
+        </div>
+        {%for related_artist in related_artists%}
+        <div class="cell large-3 medium-4">
+            <div class="card" style="width: 300px;">
+                <div class="card-divider">
+                    <h5>{{related_artist['name']}}</h5>
+                </div>
+                <img src="{{related_artist['images'][0]['url']}}">
+                <div class="card-section">
+                    <a href="{{related_artist['external_urls']['spotify']}}">Spotify Link</a>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+
+        <div class="cell">
+            <h2 class="text-center">Song Recommendations</h2>
+        </div>
+
+        {%for rec in recs%}
+        <div class="cell large-3 medium-4">
+            <div class="card" style="width: 300px;">
+                <div class="card-divider">
+                    <h5>{{rec['name']}}</h5>
+                </div>
+                <img src="{{rec['album']['images'][0]['url']}}">
+                <div class="card-section">
+                    <p>By: {{rec['album']['artists'][0]['name']}}<br>
+                        Release Date: {{rec['album']['release_date']}}
+                    </p>
+                    <a href="{{rec['external_urls']['spotify']}}">Spotify Link</a>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+
+    </div>
+    <div class="footer">
+        <footer>Copyright &copy; 2022 Canadafoxes</footer>
+    </div>
+
+</body>
+
+</html>

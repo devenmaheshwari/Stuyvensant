@@ -1,0 +1,68 @@
+<!--
+  Canada Foxes - Deven Maheshwari, Emma Buller, Lucas Lee, Naomi Naranjo
+  SoftDev
+  P01 - ArRESTed Development
+  2022-01-04
+-->
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Musical Movies</title>
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon"/>
+
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/foundation.css">
+
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text">Musical Movies</li>
+                <li>
+                    <a href="{{ url_for('index') }}">Home</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('profile') }}">Profile</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('search') }}">Search For Movies</a>
+                </li>
+            </ul>
+        </div>
+        <div class="top-bar-right">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="grid-x grid-padding-x">
+        <div class="cell">
+            <h1 class="text-center">Past Searches</h1>
+        </div>
+
+        {%for search in searches%}
+        <div class="cell">
+            <a href="/results/{{search['imdb_id']}}">
+                <div class="callout">
+                    <h4>{{search['title']}} </h4>
+                    <p> {{search['timestamp']}} </p>
+                </div>
+            </a>
+        </div>
+        {%endfor%}
+
+    </div>
+
+    <div class="footer">
+        <footer>Copyright &copy; 2022 Canadafoxes</footer>
+    </div>
+    <!-- Compressed JavaScript -->
+</body>
+
+</html>

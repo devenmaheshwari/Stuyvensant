@@ -1,0 +1,25 @@
+<!--
+    CircleTable -- Christopher Liu, Yusuf Elsharawy, Deven Maheshwari, Naomi Naranjo
+    SoftDev
+    P00: CircleStories
+
+    Login Page
+-->
+
+{% extends "base.html" %}
+{% block title %}Log In{% endblock %}
+
+{% block content %}
+    <h1>Log In</h1>
+    <h2>Please enter your username and password below to proceed.</h2>
+    <form action="/login", method="POST">
+        <p>Username: <input type="text" name="username" required></p>
+        <p>Password: <input type="password" name="password" required></p>
+        {% if error %}
+        <p style="color:red">{{ error }}</p>
+        {% endif %}
+        <input type="submit", name="sub" value="Log In">
+    </form>
+
+    <p>New user? <a href="{{ url_for('register') }}">Register</a> here.</p>
+{% endblock %}

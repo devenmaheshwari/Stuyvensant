@@ -1,0 +1,9 @@
+1. Notice how there are no commas in the numpy arrays
+
+2. Operating in byte mode
+
+3. Specifying column
+
+4. Matplotlib
+
+5. q to exit. Check out other functions

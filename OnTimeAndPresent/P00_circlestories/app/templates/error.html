@@ -1,0 +1,15 @@
+<!--
+    CircleTable -- Christopher Liu, Yusuf Elsharawy, Deven Maheshwari, Naomi Naranjo
+    SoftDev
+    P00: CircleStories
+
+    Error Handler Page
+-->
+
+{% extends "base.html" %}
+{% block title %}{{ error_title }}{% endblock %}
+
+{% block content %}
+    <h1>{{ error_title }}</h1>
+    <p>{{ error_msg }}</p>
+{% endblock %}

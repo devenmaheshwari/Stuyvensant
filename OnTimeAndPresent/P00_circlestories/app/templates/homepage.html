@@ -1,0 +1,50 @@
+<!--
+    CircleTable -- Christopher Liu, Yusuf Elsharawy, Deven Maheshwari, Naomi Naranjo
+    SoftDev
+    P00: CircleStories
+
+    Registered User Homepage
+-->
+
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome, {{ username }}!</h1>
+    <h2>
+        You are successfully logged in. Create a
+        <a href="{{ url_for('new_story') }}">new story</a> or add to an
+        existing one!
+    </h2>
+    <h2>Contribute to an Existing Story!</h2>
+    {% if not_contributed_stories %}
+    <ul>
+        {% for story_id, story_creator, story_title in not_contributed_stories %}
+        <li>
+            <a href="{{ url_for('story', story_id=story_id) }}">{{ story_title }}</a>
+            by <b>{{ story_creator|default("Unknown User") }}</b>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>
+        You've contributed to every story!
+    </p>
+    {% endif %}
+
+    <h2>View Stories You've Contributed To</h2>
+    {% if contributed_stories %}
+    <ul>
+        {% for story_id, story_creator, story_title in contributed_stories %}
+        <li>
+            <a href="{{ url_for('story', story_id=story_id) }}">{{ story_title }}</a>
+            by <b>{{ story_creator|default("Unknown User") }}</b>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>
+        You haven't contributed to any stories yet!
+    </p>
+    {% endif %}
+{% endblock %}

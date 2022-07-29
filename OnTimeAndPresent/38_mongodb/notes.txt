@@ -1,0 +1,14 @@
+Deven Maheshwari 
+SoftDev
+K34: Another DB Perspective
+2022-05-09
+
+DISCO:
+----------
+* '$' sign precedes operators. inc, set, unset.
+  * eq, grt, lte, etc   
+
+
+QCC:
+----------
+* What does CRUD stand for? 

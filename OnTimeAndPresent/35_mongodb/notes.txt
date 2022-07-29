@@ -1,0 +1,15 @@
+Deven Maheshwari 
+SoftDev
+K34: Another DB Perspective
+2022-04-27
+
+DISCO:
+----------
+- No SQL db
+- Atlas setting up database with clusters and replicas set
+
+
+QCC:
+----------
+- How does security change based on documents and tables?
+- Creating the Atlas db involved setting up access and IP address. 

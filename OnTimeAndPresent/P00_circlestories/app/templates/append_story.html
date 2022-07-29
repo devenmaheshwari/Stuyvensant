@@ -1,0 +1,29 @@
+<!--
+    CircleTable -- Christopher Liu, Yusuf Elsharawy, Deven Maheshwari, Naomi Naranjo
+    SoftDev
+    P00: CircleStories
+
+    Page for Adding to an Existing Story
+-->
+{% extends "base.html" %}
+{% block title %}{{ story_title }}{% endblock %}
+
+{% block content %}
+    <h2>{{ story_title }}: Add a new scene!</h2>
+    <p>The story so far...</p>
+    <p>{{ last_block[0] }}</p>
+    {% if last_block[1] %}
+    <img src="{{ last_block[1] }}" style="max-height:300px">
+    {% endif %}
+    <form action="/story/{{ story_id }}" method="POST">
+        <p>
+            <label for="text">Your continuation:</label></br>
+            <textarea name="text" placeholder="Continue the story here..." rows="20" cols="70" required></textarea>
+        </p>
+
+        <p>
+            <textarea name="image" placeholder="Optionally, add an image link here..." rows="1" cols="70"></textarea>
+        </p>
+        <input type="submit" value="Add to the story!">
+    </form>
+{% endblock %}

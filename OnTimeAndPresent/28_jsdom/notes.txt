@@ -1,0 +1,27 @@
+Team PurplePotatoes2 :: Christopher Liu, Deven Maheshwari
+SoftDev pd0
+K28 -- Getting more comfortable with the dev console and the DOM
+2022-02-08
+
+DISCO
+---------
+* To utilize js functions in html code, define the functions separately
+and use them between <script> tags. 
+* One of the components of the object o is a function itself
+* Methods such as 
+    * getElementById
+    * createElement
+    * appendChild
+    * getElementsByTagName
+* Use math library for min and max
+
+
+
+Q/C/C
+-----------
+* Why does the writing in the script tag replace the words between the <p> tags? 
+I believe this behavior is due to the use of innerHTML in the functions. 
+* Using helper functions for recursive wrappers makes it easier to display neccary
+information on the webpage 
+* The green styling is essentially useless other than the one line it is used for 
+because it is not used anywhere else

@@ -1,0 +1,104 @@
+Neam Time - Pat Ging, Aaron Contreras, Deven Maheshwari, David Chong, Ryan Wang
+SoftDev
+P02:
+2022-03-07
+
+devenM -- 2021-03-07 11:02
+Added file structure as well as updated design doc. Made changes based 
+on class revisions (bootstrap, datatypes for sqlite columns). Included 
+is the team flag. Also added basic functionality to requirements. 
+
+devenM -- 2021-03-08 08:36
+Updated readme with launchcodes and repushed team flag and design doc.  
+
+aaronC -- 2021-03-08 08:37
+Added basic working app
+
+davidC -- 2022-03-08 08:41
+Added prototype folder, will work on basic animation/game stuff in there while general project is being built
+
+patrickG -- 2022-03-10 08:41
+Changing the css, investigating new ideas for it. Resourcing....
+
+devenM -- 2021-03-11 08:16
+Added db maker file for users and leaderboard data. Methods for users to getID, get topscore.
+Methods for leaderboard to add score to leaderboard and get top scores. Tested.
+
+ryanW -- 2022-03-11 08:39
+Making more changes to the css and html
+
+patrickG -- 2022-03-13 22:00
+Finishing home page
+Fixing structure of the web app
+
+davidC -- 2022-03-13 22:54
+added prototype of page, will add with canvas 
+
+davidC -- 2022-03-14 08:43
+added onto prototype
+
+patrickG -- 2022-03-14 10:44
+Fixed bug where the fonts at the top of the navbar were in a serif (fixed now)
+
+aaronC -- 2022-03-15 08:27
+Added basic minigame template and requisite files
+
+devenM -- 2022-03-16 08:34
+Finished testing database. Added funcitons to get entire tables and update topscore values. 
+
+patrickG -- 2022-03-18 08:40
+- changing the templares
+- font changing
+- implementing the new leaderboard
+
+ryanW -- 2022-03-18 08:42
+- attempted to display background image on canvas. not successful.
+
+patrickG -- 2022-03-19 14:39
+- implementing new font
+- used inherited templates
+- adding more connectivity
+- housekeeping
+- hamburger menu implemented 
+- ** BUG Hamburger menu wont uncollapse on some browsers...
+
+ryanW -- 2022-03-18 08:42
+- successfully displayed background image on canvas. draw() function in maingame.js
+- ** BUG (somewhat) dimensions of background image need to be adjusted
+
+devenM -- 2022-03-21 15:09
+Changed templating for login and registration. Routing for all completed backend including
+login and registration as well as base. Fixed css for base pages. Created file structure
+to establish secret key and correct initialization of database. Specified top 10 columns for 
+leaderboard table in db.py. 
+
+ryanW -- 2022-03-18 23:04
+- fixed ALL mole coords in list (mole coords are flexible and easily modified)
+- added new mole and adjustments for size, as well as easy way to switch to other mole data
+
+patrickG -- 2022-03-22 08:41
+- new endpoint for db game , testing tooo
+
+patrickG -- 2022-03-22 10:13
+-fixing minor bug
+
+devenM -- 20220-03-22 12:23
+Added animation and scoring to maingame js in order to have mole respawning and click scoring function. 
+Fixed indenation on init
+
+ryanW -- 2022-03-22 23:10
+- discovered that adding event listeners to object within a canvas is not possible...
+
+aaronC -- 2022-03-23 23:50
+- added timer and made the mole respawn time based
+
+patrickG -- 2022-03-23 09:13
+- fixing minor bugs in templates in regards to it's links
+- adding "empty" functionality to the leaderboard
+
+ryanW -- 2022-03-23 22:55
+- added a hammer cursor
+
+ryanW -- 2022-03-24 00:39
+- fixed a bug where top left would add to score
+- (I used abs value for distance and offset x and y values)

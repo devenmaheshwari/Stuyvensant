@@ -1,0 +1,14 @@
+Deven Maheshwari 
+SoftDev
+K34: Another DB Perspective
+2022-05-12
+
+DISCO:
+----------
+* Atlas features and products
+* Visualize data helpers
+
+QCC:
+----------
+C: Double check what was covered in the collections tabs on MongoDB
+Q: What are mongoDB alternatives? I used to always think mongodb was an extension of sqlite but it is not lol. 

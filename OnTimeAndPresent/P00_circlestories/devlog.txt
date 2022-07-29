@@ -1,0 +1,155 @@
+CircleTable -- Christopher Liu, Yusuf Elsharawy, Deven Maheshwari, Naomi Naranjo
+SoftDev
+P00: CircleStories
+
+christopherL -- 2021-10-27 09:02
+Added basic file structure for app routes; added a wrapper file at the root
+level that runs the app (circlestories.py).
+
+devenM -- 2021-10-27 21:57
+Added wiki design doc for team Sports! which was split up in regrouping.
+(design_wiki1.pdf)
+
+devenM -- 2021-10-28 14:00
+Added database building python. Configured for user and story databases.
+Waiting on routes.py so that information can be processed into database.
+(db_maker.py)
+
+christopherL -- 2021-10-28 22:54
+Basic refactoring of existing code for style and general consistency. Added a
+general guidelines text file that will be added upon in the future for
+reference.
+
+christopherL -- 2021-10-28 23:45
+Updated design doc: added more fields to the database organization section as
+per our new app design (unique ids for everything). Added a database diagram.
+
+christopherL -- 2021-10-29 08:14
+Added requirements.txt for dependencies and updated README with launch codes.
+
+naomiN -- 2021-10-29 08:23
+Added HTML templates for login and logged in homepage.
+
+christopherL -- 2021-10-29 08:27
+Added routing for existing HTML templates.
+
+yusufE -- 2021-10-31 06:41
+Added all of my work from 2021-10-27 until now, including:
+- StoryDB class to interface with a given SQLite database
+- Story DAO that represents a particular row of the stories table
+- Tests to ensure that creating new stories & adding blocks works
+A lot of the current design is still subject to change.
+
+devenM -- 2021-11-01 08:22
+Created login and register html pages. Still tweaking with routing and
+connecting to db. (register.html and login.html)
+
+yusufE -- 2021-11-01 08:39
+Fixed story & block random ids by storing as hex
+Fixed updating values for a Story DAO
+Started append.html template for adding to stories
+
+devenM -- 2021-11-01 13:44
+Fixed login and register pages to display username, password, and email
+prompts. Need to import session to track user cookies
+(register.html and login.html)
+
+christopherL -- 2021-11-02 14:14
+Connected all of the existing authentication code and set up authentication
+routes. Previous db_maker.py is now incorporated into auth.py. We can now
+create a new user, log in, stay logged in (with session) and have a different
+homepage based on whether the user is logged in or not. Basic validation for
+the registration form was implemented (no empty entries, email must be an email,
+password and check password must match, username/email must be unique). We
+likely should add (1) message flashing to let the user know that registration
+worked and (2) PASSWORD HASHING because it's very insecure right now.
+
+christopherL -- 2021-11-02 20:30
+Added some basic QA and linting. I chose to use pylint for now, though it's a
+little oversensitive so we'll see. Added a .pylintrc and updated
+requirements.txt accordingly. In response to some of the linting errors, I did
+some basic refactoring as well.
+
+devenM -- 2021-11-03 08:34
+Added append and view front end pages. Routed append to main site. Allowing
+user to add to most recent block and view the entire creation on another page.
+Using story database block ID's to link entire stories. 
+
+christopherL -- 2021-11-03 09:29
+Added a method to get a user ID from a username.
+
+devenM -- 2021-11-03 13:13
+Edited routes to include append and view html files. Added view html files to
+view completed stories and linked homepages and external sites to travel
+website. Need to link storydb and routes py to keep track of last_block and
+stories. 
+
+christopherL -- 2021-11-04 08:26
+Added roster and roles to README.
+
+naomiN -- 2021-11-04 08:33
+Added HTML template for creating new stories and edited routes to included new
+story page.
+
+yusufE -- 2021-11-04 08:38
+Added more StoryDB methods for the relationship between users and stories. 
+
+devenM -- 2021-11-04 08:40
+Tested all pages, note that submission on append.html must be addressed as well
+as display of username when logged in. Changed routes to work with form
+acceptance with authentication.
+
+devenM -- 2021-11-05 08:40
+Made new_story design easier to interact with and connected it with storydb. 
+
+yusufE -- 2021-11-06 14:52
+Fixed multithreading database bug
+Added error.html template
+Fixed incorrect endpoint in homepage.html
+Fixed methods of `/new_story`
+
+christopherL -- 2021-11-06 22:18
+Added routing for all of the story/block database functionality. We can now
+create new stories, add to existing stories, and view existing stories, all
+with the appropriate permissions settings based on the user that is stored in
+the current session. Lots of QA still to do, but we have a minimum viable
+product! Also cleaned up the devlog and standardized our team header.
+
+naomiN -- 2021-11-07 21:15
+Added an app description to README and to guest landing page
+
+devenM -- 2021-11-08 13:45
+Added required inputs for new story to ensure title and content are entered. 
+Altered routing for new story to test. 
+
+christopherL -- 2021-11-09 08:06
+Set "required" attribute to other required fields in register and login forms.
+Removed email field. Updated launch codes.
+
+yusufE -- 2021-11-09 08:39
+Added a `base.html` template from which all other templates extend.
+
+devenM -- 2021-11-09 14:01
+Added branch to test image upload for stories. Note that delete story method
+and add to existing story method need to be added. 
+
+naomiN -- 2021-11-10 08:30
+Added image of team flag.
+
+christopherL -- 2021-11-10 08:34
+Set team flag as the website favicon.
+
+devenM -- 2021-11-11 23:28
+Added image functionality and tested in routes, templates, and storydb.  
+
+christopherL -- 2021-11-12 00:31
+Fixed image ordering issue and completed final code cleanup. Checked to ensure
+project is in compliance with project guildelines. Added latest design doc.
+
+yusufE -- 2021-11-12 01:54
+Updated homepage and view_story to show the usernames of creators & contributors.
+For this purpose, a function was added to `Story` to get the list of contibutors.
+Another function was added to `auth` to get the username from the user_id.
+And yet another function was added to `routes` to get the useful info
+from a list of story_id's so that it can be displayed easily by Jinja.
+And no, the timestamp on this log is not wrong. I need more sleep.
