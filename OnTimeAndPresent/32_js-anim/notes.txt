@@ -1,0 +1,16 @@
+Deven Maheshwari
+SoftDev 
+K32 More Moving Parts
+2022-02-18
+
+DISCO:
+-------
+* let logo = new Image(); 
+  logo.src = "";
+
+
+Q/C/C:
+-------
+* What is the difference between c.width and clientwidth? 
+* Switching buttons erases previous animation
+* Check canavas constraints so image does not leave viewing

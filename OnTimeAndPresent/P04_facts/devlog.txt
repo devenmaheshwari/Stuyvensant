@@ -1,0 +1,40 @@
+FACts -- Deven Maheshwari, Aaron Contreras, Owen Yaggy, Oscar Wang
+SoftDev
+P04: Le Fin
+
+devenM -- 2022-05-26 08:38
+Updated design doc with sqlite tables, column information, and site map relationships. 
+(design.pdf)
+
+owenY -- 2022-05-27 08:00
+Created file structure and researched APIs
+
+oscarW -- 2022-05-27 08:33
+- boilerplate code
+- created db file
+
+devenM -- 2022-06-01 04:59
+Created DO droplet. Running into sudo errors when hosting
+
+devenM -- 2022-06-01 08:33
+Consider the droplet provisioned. Updated README to access.
+
+owenY -- 2022-06-1 08:40
+Created HTML templates
+
+devenM -- 2022-06-02 11:00
+Added data subdirectory and added csv file/planning for student data about increased funding per student.
+
+owenY -- 2022-06-02 08:42
+Worked on HTML templates and adding Bootstrap features
+Added API key
+Worked on file to collect data from API
+
+aaronC -- 2022-06-09 20:20
+Updated DD
+
+devenM -- 2022-06-08 05:00
+Added all capabilites except for anaylze. Need to do logistic model and file path.
+
+devenM -- 2022-06-17 21:28
+With a purpose, finished project. Figured out analyze. Future groups: finalize the correlation. 

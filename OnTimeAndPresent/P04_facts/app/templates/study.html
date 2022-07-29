@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Analyze Data</h1>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        body
+        {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+        table
+        {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+        table td
+        {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <script type="text/javascript">
+        function Upload() {
+            var fileUpload = document.getElementById("fileUpload");
+            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.csv)$/;
+            if (regex.test(fileUpload.value.toLowerCase())) {
+                if (typeof (FileReader) != "undefined") {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var table = document.createElement("table");
+                        var rows = e.target.result.split("\n");
+                        for (var i = 0; i < rows.length; i++) {
+                            var cells = rows[i].split(",");
+                            if (cells.length > 1) {
+                                var row = table.insertRow(-1);
+                                for (var j = 0; j < cells.length; j++) {
+                                    var cell = row.insertCell(-1);
+                                    cell.innerHTML = cells[j];
+                                }
+                            }
+                        }
+                        var dvCSV = document.getElementById("dvCSV");
+                        dvCSV.innerHTML = "";
+                        dvCSV.appendChild(table);
+                        document.getElementById("upload").addEventListener("click", hide())
+                    }
+                    reader.readAsText(fileUpload.files[0]);
+                } else {
+                    alert("This browser does not support HTML5.");
+                }
+            } else {
+                alert("Please upload a valid CSV file.");
+            }
+        }
+
+        function search() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("table");
+            tr = table.getElementsByTagName("cell");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < cell.length; i++) {
+                td = cell[i].getElementsByTagName("cells")[0];
+                if (cells) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    cell[i].style.display = "";
+                } else {
+                    cell[i].style.display = "none";
+                }
+                }
+            }
+        }
+
+        function hide() {
+            document.getElementById("analyze").hidden = false;
+        }
+
+        function to_save() {
+            document.getElementById("fileUpload").download()
+        }
+
+    </script>
+    <form action="/study" method="POST">
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Upload CSV to Begin</label>
+            <input class="form-control" type="file" id="fileUpload" name="fileUpload">
+            <br>
+            <input type="button" id="upload" value="Upload" name="upload" onclick="Upload()"/>
+        <center>
+            <button type="submit" id="analyze" class="btn btn-outline-primary" onclick="to_save()" hidden>Analyze</button>
+        </center>
+    </form>
+        </div>
+        <hr />
+        <div id="dvCSV">
+        </div>
+        
+    
+
+    
+    
+    <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Filter" > 
+    
+    
+    -->
+</body>
+</html>
+
+{% endblock %}

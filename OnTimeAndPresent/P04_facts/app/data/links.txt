@@ -1,0 +1,7 @@
+Links to CSV files to include in demo
+
+
+1. https://data.cityofnewyork.us/browse?q=High%20School%20performance&sortBy=relevance 
+2. SODA API
+3. [SHSAT to admission] https://data.cityofnewyork.us/Education/2020-2021-SHSAT-Admissions-Test-Offers-By-Sending-/k8ah-28f4
+4. 

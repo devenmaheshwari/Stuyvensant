@@ -1,0 +1,23 @@
+Team Always Late :: Deven Maheshwari, David Chong
+SoftDev pd0
+K29 -- DOMfoolery++
+2022-02-10
+
+DISCO:
+---------
+* Keep in mind where the <script> tag is placed within the HTML frontend. Should be placed at the end of the code. 
+* Probably a better way to do this but we used global variables for each function and changed their values each time 
+a function ran in order to show the sequence of values
+* Math library in js comes in handy with generating random values
+* Incrementing works the same as in java
+
+
+
+Q/C/C:
+---------
+* JS is not compiled all together like Java is so order of function placement matters
+* Using getElementByID and EventListener together makes the code easier to raed
+* Errors
+    * "Too much recursion" - look at how functions are being called. Make sure a base case is present
+    * "Null values" - examine variable assignments and script tag
+* Use ID not name for button delineation 

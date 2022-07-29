@@ -1,0 +1,6 @@
+sodapy
+pandas
+regex
+numpy
+matplotlib
+black

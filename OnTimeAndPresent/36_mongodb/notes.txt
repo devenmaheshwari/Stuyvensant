@@ -1,0 +1,15 @@
+Deven Maheshwari 
+SoftDev
+K34: Another DB Perspective
+2022-04-27
+
+DISCO:
+----------
+- BSON is binary JSON
+- dump, restore, and drop mongo commands
+- it command for iteration
+
+QCC:
+----------
+- How else can this data be hidden (with hashes, ciphers, etc)?
+- Initial trouble accessing Atlas UI

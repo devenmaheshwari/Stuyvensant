@@ -1,0 +1,18 @@
+
+Deven Maheshwari, Aaron Contreras, and Alejandro Alonso
+SoftDev
+K25 - Flask Apache
+2022-01-20
+
+Notes:
+---------------------
+- apt is a command to update, remove, and manage ubuntu and other linux packages
+    * The most common commands are `apt-get` and `apt-cache`
+    * Very common usage with sudo user
+- Keep track of the following apt commands for necessary updates
+    * apt update -y;   
+      apt upgrade -y;   
+      apt-get autoremove -y;   
+      apt-get autoclean
+    * -y prevents verification prompt
+

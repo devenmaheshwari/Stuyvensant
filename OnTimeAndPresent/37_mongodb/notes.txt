@@ -1,0 +1,24 @@
+Deven Maheshwari 
+SoftDev
+K34: Another DB Perspective
+2022-05-09
+
+DISCO:
+----------
+* Snippets to remember: 
+
+1. Connecting to Atlas cluster: mongo "mongodb+srv://<username>:<password>@<cluster>.mongodb.net/admin"
+2. Database Navigation: use <db name>
+3. Importing documents: mongoimport --uri="mongodb+srv://<username>:<password>@<cluster>.mongodb.net/sample_supplies" sales.json 
+4. Inserting: db.inspections.insert([ { "test": 1 }, { "test": 2 }, { 
+"test": 3 } ])
+
+* Inserts happen sequentially and can be broked or interrupted
+* MQL
+
+QCC:
+----------
+C: Not a fan of the checklist quizzes
+Q: What was in the test documents, or was test the only field specificed 
+for those docs? 
+C: I read the Quiz: Insert Order incorrectly

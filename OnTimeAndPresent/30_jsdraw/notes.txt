@@ -1,0 +1,15 @@
+Team PurplePotatoes2 :: Christopher Liu, Deven Maheshwari
+SoftDev pd0
+K30 -- canvas based JS drawing
+2022-02-14
+
+DISCO:
+---------
+* Use the MDN reference guide
+* Canvas drawing
+
+Q/C/C:
+---------
+* Be aware of where beginPath is placed because it can draw lines that are not wanted 
+* c is different than ctx. The canvas itself vs the rendering object in 2d
+* By default, shapes overlap

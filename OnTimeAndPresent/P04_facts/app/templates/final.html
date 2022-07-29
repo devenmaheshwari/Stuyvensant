@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <script type="text/javascript">
+    </script>
+
+    <style>
+    button
+    {
+        padding: 5px;
+    }
+    </style>
+
+    <h1>Results</h1>
+
+    <center>
+
+    {{ first }}
+    <br>
+    {{ second }}
+    <br>
+    {{ pathname }}
+
+    <br>
+    <br>
+    {{ d1 }}
+    <br>
+    {{ d2 }}
+
+    <br><br>
+    <h3>Correlation: {{ c }}</h3>
+
+    </center>
+{% endblock %}

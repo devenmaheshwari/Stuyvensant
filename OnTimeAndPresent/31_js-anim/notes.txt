@@ -1,0 +1,14 @@
+Team PurplePotatoes2 :: Christopher Liu, Deven Maheshwari
+SoftDev pd0
+K31 -- canvas based JS animation
+2022-02-15
+
+DISCO:
+-------
+* List of available colors on mdn for fillStyle
+
+
+Q/C/C:
+-------
+* Why do the cancelAnimationFrame and requestAnimationFrame need to be part of this file? If animation is just a series of repeated drawing and clearing, can't the js file just draw a circle then wait then clear and repeat? 
+* Use consolelog like python print statements to see what is running

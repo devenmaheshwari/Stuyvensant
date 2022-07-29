@@ -1,0 +1,13 @@
+Deven Maheshwari 
+SoftDev
+K34: Another DB Perspective
+2022-05-12
+
+DISCO:
+----------
+* Aggregation framework
+* Pipeline = stack
+
+QCC:
+----------
+C: $group analysis seems conceptually similar to numpy

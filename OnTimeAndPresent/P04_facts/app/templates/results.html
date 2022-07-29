@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <script type="text/javascript">
+        function getclick1(clicked_id)
+        {
+            document.getElementById("one").setAttribute("value", clicked_id)
+        }
+
+        function getclick2(clicked_id)
+        {
+            document.getElementById("two").setAttribute("value", clicked_id)
+        }
+
+        function hide() 
+        {
+            document.getElementById("analyze").hidden = false;
+        }
+
+    </script>
+
+    <style>
+    button
+    {
+        padding: 5px;
+    }
+    </style>
+
+    <h1>Almost There</h1>
+
+    <center>
+    
+    <h4>Choose 1 Variable To Study</h4>
+    <br>
+    {% for i in options %}
+        <button type="button" id="{{ i }}" onClick="getclick1(this.id)" class="btn btn-light btn-sm active" aria-pressed="true" data-toggle="button" required>{{ i }}</button>
+    {% endfor %}
+    <br><br>
+
+    <h4>Choose a 2nd Variable To Study</h4>
+        <br>
+        {% for i in performance %}
+            <button type="button" id="{{ i }}" onClick="getclick2(this.id)" class="btn btn-secondary btn-sm active" aria-pressed="true" data-toggle="button" required>{{ i }}</button>
+        {% endfor %}
+    <br><br>
+
+    <form action="/final" method="POST">
+        <input type="text" name="one" id="one" value="" required hidden></input>
+        <input type="text" name="two" id="two" value="" required hidden></input>
+        <input type="text" name="csv" id="csv" value="{{ pathname }}" required hidden></input>
+        <button type="submit" id="graph" class="btn btn-success btn-lg btn-block">Compare</button>
+    </form>
+    
+    </center>
+{% endblock %}
