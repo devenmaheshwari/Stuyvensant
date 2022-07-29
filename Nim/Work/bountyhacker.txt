@@ -1,0 +1,20 @@
+Deven Maheshwari
+Cybersecurity
+Bounty Hacker (tryhackme)
+May 5, 2022
+
+1. Scan the network for open ports
+nmap -A -sV 10.10.16.2
+See that FTP 21 and SSH 22 are open
+
+2. Connect to FTP and see that lin wrote the task.txt since their name is 
+at the bottom
+
+3. Use hydra to brute force the ssh connection
+hydra -l lin -P locks.txt -t 4 ssh://10.10.16.2 
+Use the locks.txt file for password combinations
+
+4. Since it is asking for root.txt, play around with sudo and sudo -l to 
+see privledges. Then use the /bin/tar command along with --help and 
+--usage. I used gtfobins to understand the tar command and explored the 
+file read and also used basic cd and ls commands to find root.txt

@@ -1,0 +1,31 @@
+Deven Maheshwari
+Cybersecurity
+Marge Scavenger
+March 14, 2022
+
+Which file is executable by everyone?
+gjkw
+ls -l and observe the x (for executable) on every three sets of letters for owner, groups, and everyone. 
+
+Which file is in the student group?
+adfk
+ls -l since the 4th column shows who the file belongs to. All of them are 2061 except for this file, which is support. 
+
+
+Which file is owned by the person with UID 1000?
+id 1000 --> Service
+Adfk
+
+Which file contains 1299 words? 
+adfk
+Run $wc (word count) on each file and look at the second number
+
+
+Which file contents cannot be viewed by you?
+gjkg
+ls -l shows the permissions are not allowed. Check using cat
+
+
+Which file contents has a sha256 hash of 76a680b91b1e011d1f0f3306c36879efed20e97baa74e042f8b93b02e3ab984e?
+sha256sum -t filename
+None of the resulting strings matched 

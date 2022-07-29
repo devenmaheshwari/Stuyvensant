@@ -1,0 +1,17 @@
+Maheshwari, Deven
+1764
+1,Github,The Hunt Begins
+2,12345,The Lay of the Land
+3,08310,Humans vs. Machines
+4,37926, Moving Day
+5,46754,Is There an Echo in Here?
+6,79243,Which 'which' is which?
+7,30088,Make Me a Sandwhich
+8,91748,Counting Words
+9,71195,Searching High and Low
+10,14735,Pipes
+11,52183,The Final Frontier
+12,95930,Success!
+
+
+The hunt was pretty easy except for the 11th hint. I tried multiple combinations of -S, -l, and -r. All of these flags covered sorting by file size and listing them out as well as reversing the output, but the calls to next clue did not result in the correct clue. Eventually I looked into the -n and -k flags and specified the column to sort. I also had fun with clue 12 by at first looking for mathamatical patterns between the clue directory numbers. My other main issue involved cloning the repo after ssh'ing into the computer lab from my device. The terminal would usually just time out. To get over this, I ssh'ed into a different computer lab (149.89.160.1XX) and was able to clone it there into the tmp subdirectory. To find solutions more efficiently, I stayed in the scavenger_hunt parent directory the whole time and ran cat/ls commands to view clues and other directories. By specifying absolute paths, I found it was easier to traverse my file tree. 

@@ -1,0 +1,50 @@
+Deven Maheshwari
+Cybersecurity
+Regex
+March 21, 2022
+
+1 What flag of the uniq command shows the number of duplicates?
+-c
+
+2 What flag of sort can sort numbers properly?
+-g or -n
+
+3 How many total attempts to log in as root were there? (~19000)
+19774
+cat MargeFailedAttempts.txt | grep "root" | wc
+
+4 How many times was the account postgres used to try to connect? (~180)
+189
+cat MargeFailedAttempts.txt | grep "postgres" | wc
+This results in 378, but if you look at the file, each failed password is followed by a disconnected from...
+
+5 How many unique IP addresses tried to connect as root? (~470 if you exclude rootroot, root1, root2 etc.)
+474
+cat MargeFailedAttempts.txt | grep "root" | grep -o "[0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+" | sort | uniq | wc
+
+6 How many unique ip addressses start with 43.*? 51.* ? (~70 and ~10)
+78 (for 43)
+5 (for 51)
+cat MargeFailedAttempts.txt | grep -o "43\+\.[0-9]\+\.[0-9]\+\.[0-9]\+" | sort | uniq | wc
+cat MargeFailedAttempts.txt | grep -o "51\+\.[0-9]\+\.[0-9]\+\.[0-9]\+" | sort | uniq | wc
+
+7 How many unique account names used to connect? (~6700)
+6435
+cat MargeFailedAttempts.txt | grep -oE "invalid user [a-z]+" | sort | uniq | wc
+
+8 Find the 10 most commonly used accounts and how many times
+they were used. (hint uniq can count how many when you are removing
+duplicates. (root,admin,test,user,etc...))
+9 user
+9 demo
+9 admin
+8 ubnt
+8 test
+8 super
+8 oracle
+8 adm
+7 guest
+7 ftpuser
+
+cat MargeFailedAttempts.txt | grep -oE "invalid user [a-z]+" | uniq -c | sort 
+
