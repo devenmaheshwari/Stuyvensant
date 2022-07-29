@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- 
+  Squidcatman - Michelle Lo & Hellokitty, Angela Zhang & Inky, Deven Maheshwari & Batman
+  SoftDev
+  K13 - Template for Success/Using Flask/Creating flask app using the occupation python data 
+  October 13 2021
+ -->
+
+<html>
+
+  <head>
+    <title> {{ foo }} </title>
+  </head>
+
+  <body>
+    <h3>
+        SquidCatMan - Angela Zhang, Deven Maheshwari, Michelle Lo </br>
+        SoftDev </br>
+        K13 -- Template for Success/Flask/Writing flask app in groups using the occupation python file</br>
+        2021-10-13
+    </h3>
+    <h4> {{ random }} </h4>
+    {% for item in response %}
+    <td> {{ item }} </td> 
+    <td> <i> {{ response[item][0] }} </i> </td> 
+    <td> <a href= "{{ response[item][1] }}">Link to learn more!</a> </td> 
+    <br>
+    {% endfor %}
+  </body>
+
+</html>
+

@@ -1,0 +1,16 @@
+ITD - Ivan Lam, Tami Takada, Deven Maheshwari Pd. 1
+SoftDev
+K08 Cross Pollination and Virtual Insanity/Researching Other Code/We looked at code from other groups and to see other methods of solving K07. 
+2021-09-30
+
+Questions:
+	In team EAR, what does the seed value of 42 mean and what role does it play in debugging?
+	
+
+Comments:
+	Many groups used the same reading method of the file using the csv module. The main difference was either using DictReader, which reads input lines and converts each to a dictionary or just reading the file as a whole and parsing. 
+	Generating the random number almost always was using a random number generator and the percentages given. Most used a range between (0,1000) and then found the weighted values through arithmetic. 
+	
+Concerns:
+	Testing is definitely important to make sure code functions correctly and the user has a starting point. 
+	

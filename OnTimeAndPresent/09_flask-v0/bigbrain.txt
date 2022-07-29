@@ -1,0 +1,43 @@
+Batfish : Ishraq Mahid & Fish with Deven Maheshwari & Batman
+SoftDev
+K09 -- Frameworks, Flask, Greatness, and Duckies/Using Flask/We talked about frameworks, VENVS, and gave our duckies a name.
+2021-10-03
+
+Questions:
+
+Q0: Where have you seen similar syntax in other langs?
+We remember seeing something similar in Java. In Java, you start off with the class name and in parentheses is the constructor. 
+Perhaps we are creating a Flask object using this (__name__) constructor? 
+The __name__ is also similar to calling a main function in a python file. 
+
+Q1: What points of reference do you have for meaning of '/'?
+This reminds me of directories (and webpage urls which also utilize directories). / is generally used to mark off folder and directory paths.
+the "app.route("/")" might imply that the route we are working with is the root directory, since the only marker we have there is the slash.
+The routing can also be a reference to a URL because Flask can be used with a web browser. 
+
+Q2: Where will this print to? 
+It seems that it will print in the terminal/console, since it seems like a basic print statement inside of a normal function.
+It may also print to a given web source because of the app.route in line 4.
+
+Q3: What will it print?
+If called, it will print the module being used, depending on where it is being called.  
+Q3: Will this appear anywhere? How u know?
+I don't believe that it will print anywhere because the hello_world() function was not called anywhere. Perhaps
+hello_world maybe be a method that we are overriding, or something of the sort but to my knowledge I don't see a way for this function to
+be called and do anything.
+
+Q4: Where have you seen similar construcs in other languages?
+This reminds me of Java/OOP once again. In OOP, we have objects, which in turn have methods. I remember from Java calling methods of an 
+object by writing .methodName(), with whatever parameters desired in the parentheses. It seems like we are telling a Flask object, stored 
+under app, to run. Java also needed to compile code before running in the command line. This seems to be running it in the file, which is a 
+slight difference. 
+
+Discovery:
+When we ran it, we found that it didn't do anything remarkable. However, once navigating to the website it printed out, we found the message, "No halo queso!" written. Perhaps this hello_world function is being called somewhere and returning it's return output, leading to this result.
+
+Comments:
+Ducks are cool. Frameworks seem interesting; After we learn to use Flask, I want to explore the other web frameworks available like jinja. We're excited to start learning tools to be a SoftDev!
+Sources:
+https://blog.miguelgrinberg.com/post/why-do-we-pass-name-to-the-flask-class
+https://pythonbasics.org/what-is-flask-python/
+

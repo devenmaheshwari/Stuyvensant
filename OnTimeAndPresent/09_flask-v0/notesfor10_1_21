@@ -1,0 +1,23 @@
+Microframework:
+- templating
+- DB access
+- session management
+
+Flask:
+- werkzeng (WSGI)
+- JINJA2
+
+VENV:
+- Seperates ur stuff from work stuff
+- Modules will only be used in that space and wont interfere with things
+- Can easily delete it 
+- . path/to/venv/bin/activate
+
+Pip:
+- Need to update pip
+
+App.py
+- Warning to not use in production deployment. Mainly for development
+- Running with debug mode off as default and specifies computer IP
+- What is lazy loading? 
+

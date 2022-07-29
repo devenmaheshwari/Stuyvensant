@@ -1,0 +1,24 @@
+Squidcatman - Michelle Lo & Hellokitty, Angela Zhang & Inky, Deven Maheshwari & Batman
+SoftDev
+K13 - Template for Success/Using Flask/Creating flask app using the occupation python data 
+October 13 2021
+
+Notes:
+- Angela and Deven had similar python implementations of occupation because they imported the file into their new directories. 
+Michelle rereated the functions in the various assignments rather than import. 
+- We used Michelle's method so that our file tree would match the given one. 
+
+Discoveries:
+- Adding more @app.route("/") creates more websites built off of the home http://127.0.0.1:5000/.
+- We learned about this last assignment but the {% for ... %} can create python for loops within the HTML code. The {% end for %} is necessary. 
+
+Questions:
+- Implementing Reng's debugging method??
+
+Ego:
+- Owning a program is different from owning a building or art: it is more objectively judged and can limit a programmer from taking criticism and improving. 
+- Cognitive Dissonance:
+    - Dissonance must be healed psychologically, but it will not be through a person's self-image which extends to their code. 
+    - Eventually, suggestions must be taken into account. But time can be wasted due to limiting the scope of criticism and educaiton.
+    - The "it's not my fault" excuse when coding
+- Working in groups helps alleviate this defense mechanism. Sharing code, finding bugs, and disasscoiating files from oneself can make it easier to find and fix errors. 

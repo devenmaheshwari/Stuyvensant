@@ -1,0 +1,20 @@
+Q0: What happens if you remove render_template from this line?
+You will get an error when you try to call it, because it won't be imported from the flask module.
+
+Q1: Can all of your teammates confidently predict the URL to use to load this page?
+We all predicted that it would be http://localhost:5000/my_foist_template
+
+Q2: What is the significance of each argument?
+The first argument is the (path &) filename of the template from the templates folder.
+The keyword arguments are all values passed to template.
+
+We expect that the title of the webpage will be " fooooo ",
+and the body will have 0, 1, 1, 2, 3, 5, & 8 displayed on separate lines.
+We also noted that the templates are stored in the "templates" directory,
+and we expect that they won't be directly accessible by the user.
+
+We also noticed that the double braces (e.g. `{{ foo }}`) would add the value of foo to the html.
+And braces with parenthese (e.g. `{% endfor %}`) signify a command in Jinja's template language.
+
+Coolest discovery: You can do a lot with just the template language!
+https://overiq.com/flask-101/basics-of-jinja-template-language/

@@ -1,0 +1,25 @@
+<!-- Lightning Cheese (Emma Buller and Deven Maheshwari)
+SoftDev
+K23 -- No.2?
+2021-12-1
+time spent: -->
+
+DISCO:
+* JavaScript emphasis and necessary for styline
+* Alignment is not done by float attribute in classes but simply in the class tag
+* Foundation uses libraries to control javascript functions such as MotionUI and Style Sherpa
+* Foundation and Bootstrap have plugins, which control data manipulation and viewing
+
+Questions/Comments/Concerns:
+* Why does the button in line 111 specify a type while the button in line 110 does not
+* When JavaScript is removed, website still loads.
+  * Dropdown menus, slider, closables do not function as they were meant
+  * Navbar looks extremely similar to Bootstrap when JavaScript is removed
+* Pagination and "show kittens" button not functioning
+* Both have a 12 column structure for gridtables
+
+Q0:
+* Looked through foundation docs to understand previously defined attributes and
+  emphasis on script
+* Was not necessary to look through docs for understanding, but wanted to see other
+  aspects of Foundation that may not have been included. 

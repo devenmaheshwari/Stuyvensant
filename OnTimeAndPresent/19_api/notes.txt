@@ -1,0 +1,9 @@
+Lightning Cheese (Emma Buller and Deven Maheshwari)
+SoftDev
+K19 -- A RESTful Journey (Using RESTapis)
+2021-11-23
+time spent: 45 Minutes
+
+urllib lets us access contents of the json library.
+read converts the request object into a string that
+can be used as an argument for json.loads()

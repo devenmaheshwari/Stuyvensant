@@ -1,0 +1,19 @@
+Sports! - Sean Ging and Deven Maheshwari
+SoftDev
+K15 - Sessions Greetings/Cookies & Error Handling/App to hadnle bad inputs and tracking username
+Oct 19 2021 
+
+Notable: 
+- As usernames are submitted on the app.py side, the Firefox web devlopment tool tracks what kind of request was generated. 
+- Redirection seems to be necessary for keeping cookies/session logged in 
+- Unscriptable methods refer to the use of [] rather than () because of the syntax of how methods are called. 
+- Using links to travel in between pages using <a href></a> seems to be the simplest way of logging out and trying account combinations
+- Redirect still allows the login.html code to be called for a successful login just at a different url. 
+
+Questions:
+- Does it track lower vs upper case? We predict yes because when testing with lowercase password, log in fails. 
+
+Sources:
+- https://www.tutorialspoint.com/flask/flask_sessions.htm 
+- https://flask.palletsprojects.com/en/2.0.x/quickstart/
+- Jinja Docs

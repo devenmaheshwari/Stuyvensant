@@ -1,0 +1,39 @@
+# Sports! - Sean Ging and Deven Maheshwari
+# SoftDev
+# K16 - All About Databse/Skeleton stub/SQLITE3 BASICS
+# Oct 21 2021 
+
+
+CSV Module:
+---------------
+- Dictreader maps each row to a dictonary
+
+
+Notable:
+-------------
+* Uses ; at the end of each statement like java
+* .open ends the connection between sqlite terminal and db?? "no such table: <table_name>
+* Command: SELECT * FROM tpotusa;
+  --> Return:  basitar|2
+* ...> occurs in terminal when calling some sqlite functions. Does not allow user to get data from database. 
+  --> https://www.sqlite.org/cli.html. This symbol is a continuation prompt in the case of an error in the sqlite terminal when inputting a command.   
+
+Errors Encountered:
+--------------------------
+* sqlite3.OperationalError: table courses already exists 
+  --> db file already created. Solution: delete from directory
+* sqlite3.OperationalError: unrecognized token: "{"
+  --> attempting to input variables in input. Just use standard string syntax
+* sqlite3.OperationalError: near "[keys]": syntax error
+  --> calling out syntax errors within python code
+* sqlite3.OperationalError: incomplete input
+  --> most likely missing a closing ) or ;
+* sqlite3.OperationalError: no such column: systems
+  --> https://programmerah.com/sqlite3-operationalerror-no-such-column-31782/
+  * sqlite3.ProgrammingError: Incorrect number of bindings supplied. The current statement uses 2, and there are 0 supplied.
+  --> Check input arguments
+
+
+  Questions:
+  -------------
+  What does "Connected to a transient in-memory database" mean?

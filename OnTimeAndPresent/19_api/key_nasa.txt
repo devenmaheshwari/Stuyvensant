@@ -1,0 +1,8 @@
+Lightning Cheese (Emma Buller and Deven Maheshwari)
+SoftDev
+K19 -- A RESTful Journey (Using RESTapis)
+2021-11-23
+time spent: 45 Minutes
+
+Key: uhAKVvq7ohfNOGPx5IMu3bUGcAsaikXHR7IYMtjw
+url: https://api.nasa.gov/planetary/apod?api_key=uhAKVvq7ohfNOGPx5IMu3bUGcAsaikXHR7IYMtjw

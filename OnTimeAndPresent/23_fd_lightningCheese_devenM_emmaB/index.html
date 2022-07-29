@@ -1,0 +1,165 @@
+<!--
+Lightning Cheese (Emma Buller and Deven Maheshwari)
+SoftDev
+K23 -- No. 2?
+2021-12-01
+time spent: 30 minutes
+!-->
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Website Using Foundation </title>
+
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
+
+    <!-- MotionUI Animations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <h1 class="text-center">Welcome to Lightning Cheese (Foundation edition)<h1></h1>
+       
+    <div class="top-bar">
+        <div class="top-bar-left">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">Lightning Cheese</li>
+            <li>
+              <a href="#">One</a>
+              <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+              </ul>
+            </li>
+            <li>
+                <a href="#">Two</a>
+                <ul class="menu vertical">
+                  <li><a href="#">One</a></li>
+                  <li><a href="#">Two</a></li>
+                  <li><a href="#">Three</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Three</a>
+                <ul class="menu vertical">
+                  <li><a href="#">One</a></li>
+                  <li><a href="#">Two</a></li>
+                  <li><a href="#">Three</a></li>
+                </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <ul class="menu">
+            <li><input type="search" placeholder="Search"></li>
+            <li><button type="button" class="button">Search</button></li>
+          </ul>
+        </div>
+      </div>
+    <br>
+      <div class="media-object stack-for-small">
+        <div class="media-object-section">
+          <div class="thumbnail">
+            <img src="https://images.newscientist.com/wp-content/uploads/2021/08/06164343/lightningroom_-the-agency_alamy_f13d8m.jpg">
+          </div>
+        </div>
+        <div class="media-object-section">
+        <span class="label primary">Lightning</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        </div>
+      </div> <br>
+<div class="grid-x grid-padding-x">
+ <div class="media-object stack-for-small">
+        <div class="media-object-section">
+        <span class="label warning">Cheese</span>
+        <p>Cheese is a dairy product, derived from milk and produced in wide ranges of flavors, textures and forms by coagulation of the milk protein casein. It comprises proteins and fat from milk, usually the milk of cows, buffalo, goats, or sheep. During production, the milk is usually acidified and the enzymes of either rennet or bacterial enzymes with similar activity are added to cause the casein to coagulate. The solid curds are then separated from the liquid whey and pressed into finished cheese.</p>
+        </div>
+        <div class="media-object-section">
+          <div class="thumbnail">
+            <img src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/healthiest-cheese-1296x728-swiss.jpg?w=1155&h=1528">
+          </div>
+        </div>
+    </div>
+</div>
+
+<form method="GET">
+  <label for="name">Username:</label>
+  <input type="text" name="name" id="name">
+  <label for="name">Password:</label>
+  <input type="text" name="password" id="password">
+</form>
+
+<button class="submit success button">Save</button>
+<button type="button" class="alert button">Cancel</button>
+
+<div class="grid-x grid-padding-x">
+  <div class="cell large-1 medium-1 small-1 alert">Food!</div>
+  <div class="cell large-1 medium-1 small-1">Art!</div>
+  <div class="cell large-1 medium-1 small-1">Music!</div>
+  <div class="cell large-1 medium-1 small-1">Theatre!</div>
+  <div class="cell large-1 medium-1 small-1">CS!</div>
+  <div class="cell large-1 medium-1 small-1">Sports!</div>
+  <div class="cell large-1 medium-1 small-1">Opinions!</div>
+  <div class="cell large-1 medium-1 small-1">Colors!</div>
+  <div class="cell large-1 medium-1 small-1">Fruit!</div>
+  <div class="cell large-1 medium-1 small-1">Clothing!</div>
+  <div class="cell large-1 medium-1 small-1">Sleep!</div>
+  <div class="cell large-1 medium-1 small-1">Boom!</div>
+</div>
+  
+<div class="grid-x grid-padding-x">
+  <div class="cell">
+      <div class="slider" data-slider data-initial-start="50" data-end="200">
+          <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
+          <span class="slider-fill" data-slider-fill></span>
+          <input type="hidden">
+      </div>
+  </div>
+</div>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Compressed JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/plugins/foundation.core.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/plugins/foundation.util.keyboard.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/plugins/foundation.util.nest.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/plugins/foundation.util.box.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/plugins/foundation.util.touch.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/plugins/foundation.util.motion.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/plugins/foundation.util.timer.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/plugins/foundation.util.imageLoader.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/plugins/foundation.util.triggers.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/plugins/foundation.dropdownMenu.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/plugins/foundation.slider.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/plugins/foundation.orbit.min.js" crossorigin="anonymous"></script>
+
+
+    <script>
+        $(document).foundation();
+    </script>
+
+
+</body>
+
+</html>

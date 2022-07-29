@@ -1,0 +1,17 @@
+Sports! - Sean Ging and Deven Maheshwari
+SoftDev
+K14 - Form and Function/Intro to Flask/App to echo input from user. 
+Oct 14 2021 
+
+Notable: 
+- When one line is commented out at a time from login.html, the website still successfully loads and takes input. When corressponding sets of code are commented out, an error message pops up citing no username field found. 
+- 'GET' vs 'POST' method depends on how data is received and processed, whether it is simply accessing it or storing it through a remote server respectively. 
+- Request obj and request args give helpful information to check if the program is receiving anything from the input and makes it easier to manipulate the data. 
+- Just in general syntax, adding new line print statements make it easier to see everything from a debugging standpoint. 
+
+Questions:
+- Is it more efficient to produce this webpage by template - returning the input as a variable and sending it to the html file, or simply printing the html through a return function?
+
+
+Sources:
+- https://realpython.com/python-requests/
