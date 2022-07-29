@@ -1,0 +1,39 @@
+Assignment 33
+----------------
+By By Gavin Mcginley, Chloe Liu, Deven Maheshwari, Alex Garcia, Oscar Fishman
+
+         General Results
+Button Name     |     Sorting Algorithm
+----------------|----------------------
+Alpha           |     Bubble
+Beta            |     Selection
+Gamma           |     Insertion
+Delta           |     Merge
+Epsilon         |     Quick
+Zeta            |     Heap
+
+                                            Rationale
+
+We chose data sets of size 256, 512, 1024, and 2048, doubling the size with each test run. 
+Button Epsilon, when used with an ordered list, will have a large amount of moves: when run with 
+256 data points it has 32640 moves. From this, we can conclude button Epsilon is a quick sort. 
+
+Button Delta has the same number of movements whether the set is ordered or reverse, for example the
+256 data points resulted in 2554 moves for the set when ordered or reversed. A merge sort splits the list 
+in half and eventually pairs the remaining list as its sorting method, so for merge sorts the same amount 
+of moves take place whether the set is ordered or reversed to beging with. Therefore, button Delta is the
+merge sort. 
+
+Bubble, selection, and insertion sorting are all O(n^2), however, while the best case scenario for bubble 
+and selection are still O(n^2), the best case for insertion is O(n). When using an ordered list with button 
+Gamma, the time required for sorting is always 0. However, for buttons Alpha, Beta, and Zeta, and list sizes
+1024 and 2048, the time required varys. Therefore, button Gamma is the insertion sort.  
+
+When a bubble sort is used on a reversed array, it makes a number of movements proportional to the list length. 
+When a selection sort is used on a reversed array, it will swap the elements with the relative minmum, so it would
+take half the moves when compared to a bubble sort. When comparing button Alpha, Beta, and Zeta with an ordered set, 
+Alpha and Beta do not have moves, wheras Zeta does. When comparing buttons Alpha and Beta with reversed lists, button 
+Beta has half of the amount of moves as Alpha does, such as with a list of length 512 where Alpha has 130816 moves and 
+Beta has 65536 moves. Therefore, button Beta is a selection sort and button Alpha is a bubble sort.
+
+By elimination, button Zeta is a heap sort. 
